@@ -1,0 +1,27 @@
+# Optional
+image:
+  repository: registry.eks-sandbox.aws.main.edp-delivery-kk-dev/hello-world
+  tag: 0.1.0-SNAPSHOT.2
+  pullPolicy: IfNotPresent
+  command:
+    - /hello-world
+  args:
+    - --port
+    - "8080"
+replicas: 1
+host: null
+path: /
+clusterIssuer: letsencrypt
+TEXT:
+TEXT_SUFFIX:
+COLOR:
+BACKGROUND_COLOR:
+# ingressExtraAnnotations:
+#   name: value
+#   foo: bar
+ingressClassName: nginx
+ingressExtraAnnotations: {}
+ingressTlsDisable: false
+tlsKeyBase64: null
+tlsCrtBase64: null
+imagePullSecret: null
